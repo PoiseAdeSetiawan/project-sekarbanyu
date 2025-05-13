@@ -1,0 +1,73 @@
+.registration {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #6FB1FC, #4364F7);
+    padding: 1rem;
+}
+
+.registration-wrapper {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    text-align: left;
+}
+
+.registration_title {
+    font-family: 'Merriweather', 'Nunito', sans-serif;
+    font-weight: 700;
+    text-align: left;
+    font-size: 2.2rem;
+    line-height: 1.1;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.registration_subtitle {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 400;
+    text-align: left;
+    color: #666;
+    margin-bottom: 0.5rem;
+}
+
+form input[type="text"] {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    margin-bottom: 1.5rem;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
+
+form input[type="text"]:focus {
+    border-color: #4364F7;
+    outline: none;
+}
+
+form button {
+    width: 100%;
+    padding: 0.75rem;
+    background-color: #4364F7;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+form button:hover {
+    background-color: #3542c3;
+}
+
+form button:active {
+    background-color: #2a2f9d;
+}

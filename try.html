@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registrasi Sekarbanyu</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            font-family: 'Segoe UI', sans-serif;
+        }
+
+        body {
+            margin: 0;
+            background: linear-gradient(135deg, #6FB1FC, #4364F7);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 1rem;
+        }
+
+        .form-container {
+            background: white;
+            padding: 2rem;
+            border-radius: 16px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            width: 100%;
+            text-align: center;
+        }
+
+        .form-container h1 {
+            font-size: 1.8rem;
+            color: #333;
+            margin-bottom: 0.5rem;
+        }
+
+        .form-container p {
+            color: #666;
+            margin-bottom: 1.5rem;
+        }
+
+        label {
+            display: block;
+            text-align: left;
+            font-weight: 500;
+            margin-bottom: 0.5rem;
+            color: #444;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            margin-bottom: 1.5rem;
+            transition: border-color 0.3s;
+        }
+
+        input[type="text"]:focus {
+            border-color: #4364F7;
+            outline: none;
+        }
+
+        button {
+            width: 100%;
+            padding: 0.75rem;
+            background-color: #4364F7;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-size: 1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        button:hover {
+            background-color: #3542c3;
+        }
+
+        .output {
+            margin-top: 1.5rem;
+            font-weight: 500;
+            color: #222;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="form-container">
+        <h1>Selamat Datang di Sekarbanyu</h1>
+        <p>Tuliskan Nama Anda</p>
+        <form id="nameForm">
+            <label for="name">Nama</label>
+            <input type="text" id="name" name="name" placeholder="Masukkan nama anda" required />
+            <button type="submit">Masuk</button>
+        </form>
+        <div class="output" id="output"></div>
+    </div>
+
+    <script>
+        const form = document.getElementById('nameForm');
+        const output = document.getElementById('output');
+
+        form.addEventListener('submit', function (e) {
+            e.preventDefault();
+            const name = document.getElementById('name').value.trim();
+            if (name) {
+                console.log("Nama disimpan:", name);
+                output.textContent = `Halo, ${name}! Terima kasih telah mendaftar.`;
+                form.reset();
+            } else {
+                output.textContent = 'Silakan masukkan nama Anda terlebih dahulu.';
+            }
+        });
+    </script>
+</body>
+
+</html>
