@@ -1,31 +1,47 @@
 .registration {
+    position: fixed;
+    z-index: 9999;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100vw;
+    height: 100vh;
+    min-height: 100vh;
+    background: url('../resource/images/registation-bg.png');
+    background-size: cover;
+    background-position: center;
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%;
-    min-height: 100vh;
-    background: linear-gradient(135deg, #6FB1FC, #4364F7);
     padding: 1rem;
+    overflow-y: auto;
 }
 
 .registration-wrapper {
     background: #fff;
     padding: 2rem;
     border-radius: 16px;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
     width: 100%;
     max-width: 400px;
     text-align: left;
+    box-sizing: border-box;
 }
 
 .registration_title {
     font-family: 'Merriweather', 'Nunito', sans-serif;
-    font-weight: 700;
+    font-weight: 600;
     text-align: left;
-    font-size: 2.2rem;
+    font-size: 2.4rem;
     line-height: 1.1;
     color: #333;
     margin-bottom: 1rem;
+}
+
+.registration_title span {
+    color: #7A3162;
+    font-weight: 700;
 }
 
 .registration_subtitle {
@@ -47,27 +63,29 @@ form input[type="text"] {
 }
 
 form input[type="text"]:focus {
-    border-color: #4364F7;
+    border-color: #7A3162;
     outline: none;
 }
 
 form button {
     width: 100%;
     padding: 0.75rem;
-    background-color: #4364F7;
+    background-color: #7A3162;
     color: white;
     border: none;
     border-radius: 10px;
     font-size: 1rem;
     font-weight: bold;
     cursor: pointer;
-    transition: background 0.3s;
+    transition: all 0.3s;
 }
 
 form button:hover {
-    background-color: #3542c3;
+    background-color: #542243;
+    transform: scale(1.05);
 }
 
 form button:active {
-    background-color: #2a2f9d;
+    background-color: #38162b;
+    transform: scale(0.95);
 }

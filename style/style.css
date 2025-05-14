@@ -4,20 +4,20 @@
 @import url('../block/header.css');
 
 html {
-    background-color: #333;
+    background-color: #fAfAfA;
 }
 
 body {
-    max-width: 1440px;
     width: 100%;
     min-height: 100vh;
-    margin: 0 auto;
+    margin: 0;
+    /* ensure no margin */
     padding: 0;
     display: flex;
     align-items: center;
     flex-direction: column;
     position: relative;
-    background-color: #f4f4f4;
+    background-color: #fAfAfA;
     font-family: 'Merriweather', 'Nunito', sans-serif;
     font-size: 16px;
     line-height: 1.5;
