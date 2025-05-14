@@ -8,7 +8,7 @@
     width: 100vw;
     height: 100vh;
     min-height: 100vh;
-    background: url('../resource/images/registation-bg.png');
+    background: linear-gradient(rgba(0, 0, 0, 0.05)), url('../resource/images/registation-bg.png');
     background-size: cover;
     background-position: center;
     display: flex;

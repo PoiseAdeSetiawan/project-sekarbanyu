@@ -50,7 +50,7 @@ document.addEventListener('DOMContentLoaded', function () {
             headerSubtitle.innerHTML = ""; // Hide Sekarbanyu before animation
 
             // Calculate delay: total time = chars * speed
-            const speed = 40;
+            const speed = 30;
             const titleLength = headerTitle.innerHTML.replace(/<[^>]*>/g, '').length;
             const delay = titleLength * speed;
 
@@ -64,8 +64,44 @@ document.addEventListener('DOMContentLoaded', function () {
             // Hide popup and enable scrolling
             registrationSection.style.display = 'none';
             document.body.style.overflow = '';
+
+            // Always scroll to header section after popup closes
+            const headerSection = document.querySelector('.header');
+            headerSection.scrollIntoView({ behavior: 'smooth' });
         } else {
             headerTitle.textContent = 'Silakan masukkan nama Anda terlebih dahulu.';
         }
     });
+});
+
+function smoothScrollTo(element, duration = 1000) {
+    const targetPosition = element.getBoundingClientRect().top + window.pageYOffset;
+    const startPosition = window.pageYOffset;
+    const distance = targetPosition - startPosition;
+    let startTime = null;
+
+    function animation(currentTime) {
+        if (startTime === null) startTime = currentTime;
+        const timeElapsed = currentTime - startTime;
+        const run = ease(timeElapsed, startPosition, distance, duration);
+        window.scrollTo(0, run);
+        if (timeElapsed < duration) requestAnimationFrame(animation);
+    }
+
+    // Ease function for smoothness
+    function ease(t, b, c, d) {
+        t /= d / 2;
+        if (t < 1) return c / 2 * t * t + b;
+        t--;
+        return -c / 2 * (t * (t - 2) - 1) + b;
+    }
+
+    requestAnimationFrame(animation);
+}
+
+const headerButton = document.querySelector('.header_button');
+const aboutSection = document.querySelector('.about');
+
+headerButton.addEventListener('click', function () {
+    smoothScrollTo(aboutSection, 400); // 1000ms = 1 second
 });

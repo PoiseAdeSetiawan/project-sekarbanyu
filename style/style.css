@@ -2,6 +2,7 @@
 @import url('../vendor/font.css');
 @import url('../block/registration.css');
 @import url('../block/header.css');
+@import url('../block/about.css');
 
 html {
     background-color: #fAfAfA;
@@ -21,6 +22,7 @@ body {
     font-family: 'Merriweather', 'Nunito', sans-serif;
     font-size: 16px;
     line-height: 1.5;
+    background: linear-gradient(90deg, #fAfAfA, #fff, #fAfAfA);
     color: #333;
 }
 
