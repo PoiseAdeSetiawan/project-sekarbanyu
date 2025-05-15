@@ -2,6 +2,8 @@
 
 **Sekarbanyu** adalah sebuah aplikasi berbasis web yang dikembangkan oleh **Pengadilan Negeri Kediri** untuk membantu masyarakat dalam melakukan pendaftaran dan memperoleh informasi terkait perkara **perdata**, serta menyediakan akses ke **layanan Pos Bantuan Hukum (Posbakum)** secara **online dan terintegrasi**.
 
+link : [**Sekarbanyu**](https://poiseadesetiawan.github.io/project-sekarbanyu/)
+
 ---
 
 ## 📝 Deskripsi
