@@ -72,36 +72,77 @@ document.addEventListener('DOMContentLoaded', function () {
             headerTitle.textContent = 'Silakan masukkan nama Anda terlebih dahulu.';
         }
     });
-});
 
-function smoothScrollTo(element, duration = 1000) {
-    const targetPosition = element.getBoundingClientRect().top + window.pageYOffset;
-    const startPosition = window.pageYOffset;
-    const distance = targetPosition - startPosition;
-    let startTime = null;
+    // header button scroll to about section
+    function smoothScrollTo(element, duration = 1000) {
+        const targetPosition = element.getBoundingClientRect().top + window.pageYOffset;
+        const startPosition = window.pageYOffset;
+        const distance = targetPosition - startPosition;
+        let startTime = null;
 
-    function animation(currentTime) {
-        if (startTime === null) startTime = currentTime;
-        const timeElapsed = currentTime - startTime;
-        const run = ease(timeElapsed, startPosition, distance, duration);
-        window.scrollTo(0, run);
-        if (timeElapsed < duration) requestAnimationFrame(animation);
+        function animation(currentTime) {
+            if (startTime === null) startTime = currentTime;
+            const timeElapsed = currentTime - startTime;
+            const run = ease(timeElapsed, startPosition, distance, duration);
+            window.scrollTo(0, run);
+            if (timeElapsed < duration) requestAnimationFrame(animation);
+        }
+
+        // Ease function for smoothness
+        function ease(t, b, c, d) {
+            t /= d / 2;
+            if (t < 1) return c / 2 * t * t + b;
+            t--;
+            return -c / 2 * (t * (t - 2) - 1) + b;
+        }
+
+        requestAnimationFrame(animation);
     }
 
-    // Ease function for smoothness
-    function ease(t, b, c, d) {
-        t /= d / 2;
-        if (t < 1) return c / 2 * t * t + b;
-        t--;
-        return -c / 2 * (t * (t - 2) - 1) + b;
+    const headerButton = document.querySelector('.header_button');
+    const aboutSection = document.querySelector('.about');
+
+    headerButton.addEventListener('click', function () {
+        smoothScrollTo(aboutSection, 400); // 1000ms = 1 second
+    });
+
+
+    //navigation
+    const navigation = document.querySelector('.navigation');
+
+    // Di awal, sembunyikan secara visual
+    navigation.classList.remove('show-navigation');
+
+    // Tangani scroll
+    let isNavigationVisible = false;
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 850) {
+            if (!isNavigationVisible) {
+                navigation.style.display = 'flex'; // tampilkan dulu agar animasi bisa jalan
+                requestAnimationFrame(() => {
+                    navigation.classList.add('show-navigation');
+                });
+                isNavigationVisible = true;
+            }
+        } else {
+            if (isNavigationVisible) {
+                navigation.classList.remove('show-navigation');
+                isNavigationVisible = false;
+
+                // Tunggu transisi selesai baru sembunyikan
+                setTimeout(() => {
+                    if (!isNavigationVisible) navigation.style.display = 'none';
+                }, 400);
+            }
+        }
+    });
+
+    function toggleNavigationMenu() {
+        const navigationNavigationitems = document.getElementById('navigationItems');
+        navigationNavigationitems.classList.toggle('show-navigation');
     }
 
-    requestAnimationFrame(animation);
-}
-
-const headerButton = document.querySelector('.header_button');
-const aboutSection = document.querySelector('.about');
-
-headerButton.addEventListener('click', function () {
-    smoothScrollTo(aboutSection, 400); // 1000ms = 1 second
+    const navBurger = document.querySelector('.navigation_menu-toggle').addEventListener('click', function () {
+        toggleNavigationMenu();
+    });
 });
