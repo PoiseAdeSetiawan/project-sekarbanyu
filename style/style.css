@@ -5,6 +5,7 @@
 @import url('../block/registration.css');
 @import url('../block/header.css');
 @import url('../block/about.css');
+@import url('../block/contact.css');
 
 html {
     background-color: #fAfAfA;
