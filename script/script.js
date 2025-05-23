@@ -38,7 +38,6 @@ document.addEventListener('DOMContentLoaded', function () {
         type();
     }
 
-
     // On form submit
     form.addEventListener('submit', function (e) {
         e.preventDefault();
@@ -74,7 +73,11 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     // header button scroll to about section
-    function smoothScrollTo(element, duration = 1000) {
+    const headerButton = document.querySelector('.header_button');
+    const aboutSection = document.querySelector('.about');
+
+    // header button scroll to about section
+    function smoothScrollTo(element, duration) {
         const targetPosition = element.getBoundingClientRect().top + window.pageYOffset;
         const startPosition = window.pageYOffset;
         const distance = targetPosition - startPosition;
@@ -99,50 +102,41 @@ document.addEventListener('DOMContentLoaded', function () {
         requestAnimationFrame(animation);
     }
 
-    const headerButton = document.querySelector('.header_button');
-    const aboutSection = document.querySelector('.about');
-
     headerButton.addEventListener('click', function () {
-        smoothScrollTo(aboutSection, 400); // 1000ms = 1 second
+        smoothScrollTo(aboutSection, 400);
     });
 
-
-    //navigation
+    // navigation show/hide based on header visibility
     const navigation = document.querySelector('.navigation');
+    const headerSection = document.querySelector('.header');
 
-    // Di awal, sembunyikan secara visual
+    // Hide navigation initially
     navigation.classList.remove('show-navigation');
 
-    // Tangani scroll
     let isNavigationVisible = false;
     window.addEventListener('scroll', () => {
-        if (window.scrollY > 850) {
+        const rect = headerSection.getBoundingClientRect();
+        const isHeaderVisible = rect.bottom > 0 && rect.top < window.innerHeight;
+
+        if (!isHeaderVisible) {
             if (!isNavigationVisible) {
-                navigation.style.display = 'flex'; // tampilkan dulu agar animasi bisa jalan
-                requestAnimationFrame(() => {
-                    navigation.classList.add('show-navigation');
-                });
+                navigation.classList.add('show-navigation');
                 isNavigationVisible = true;
             }
         } else {
             if (isNavigationVisible) {
                 navigation.classList.remove('show-navigation');
                 isNavigationVisible = false;
-
-                // Tunggu transisi selesai baru sembunyikan
-                setTimeout(() => {
-                    if (!isNavigationVisible) navigation.style.display = 'none';
-                }, 400);
             }
         }
     });
 
     function toggleNavigationMenu() {
-        const navigationNavigationitems = document.getElementById('navigationItems');
-        navigationNavigationitems.classList.toggle('show-navigation');
+        const navigationItems = document.getElementById('navigationItems');
+        navigationItems.classList.toggle('show-navigation');
     }
 
-    const navBurger = document.querySelector('.navigation_menu-toggle').addEventListener('click', function () {
+    document.querySelector('.navigation_menu-toggle').addEventListener('click', function () {
         toggleNavigationMenu();
     });
 });
