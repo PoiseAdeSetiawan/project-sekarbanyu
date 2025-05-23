@@ -6,6 +6,7 @@
 @import url('../block/header.css');
 @import url('../block/about.css');
 @import url('../block/contact.css');
+@import url('../block/footer.css');
 
 html {
     background-color: #fAfAfA;
