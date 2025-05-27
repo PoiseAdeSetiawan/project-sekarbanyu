@@ -104,6 +104,7 @@
 
     .header_content {
         align-items: center;
+        justify-content: space-evenly;
     }
 
     .header_title,
@@ -116,7 +117,7 @@
 
     .header_title,
     .header_subtitle {
-        font-size: 3rem;
+        font-size: 4rem;
     }
 
     .header_button {
