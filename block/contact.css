@@ -97,6 +97,10 @@
 
 /* Responsive */
 @media (max-width: 900px) {
+    .contact {
+        padding: 40px 20px;
+    }
+
     .contact-main {
         flex-direction: column;
         gap: 32px;
