@@ -1,8 +1,8 @@
 # 🌸 Sekarbanyu
 
-**Sekarbanyu** adalah sebuah aplikasi berbasis web yang dikembangkan oleh **Pengadilan Negeri Kediri** untuk membantu masyarakat dalam melakukan pendaftaran dan memperoleh informasi terkait perkara **perdata**, serta menyediakan akses ke **layanan Pos Bantuan Hukum (Posbakum)** secara **online dan terintegrasi**.
+**Sekarbanyu** adalah sebuah aplikasi berbasis web yang dikembangkan oleh **Pengadilan Negeri Kediri** untuk membantu masyarakat dalam memperoleh bantuan dokumen hukum seperti surat gugatan perdata dan permohonan, serta menyediakan akses ke **layanan Pos Bantuan Hukum (Posbakum)** secara **online dan terintegrasi**.
 
-link : [**Sekarbanyu**](https://poiseadesetiawan.github.io/project-sekarbanyu/)
+🔗 Link: [Sekarbanyu](https://poiseadesetiawan.github.io/project-sekarbanyu/)
 
 ---
 
@@ -10,8 +10,9 @@ link : [**Sekarbanyu**](https://poiseadesetiawan.github.io/project-sekarbanyu/)
 
 Aplikasi ini bertujuan untuk meningkatkan pelayanan publik di lingkungan Pengadilan Negeri Kediri dengan menghadirkan sistem informasi yang mudah diakses, efisien, dan responsif terhadap kebutuhan masyarakat, khususnya dalam perkara perdata dan layanan bantuan hukum.
 
-Fitur utama yang akan disediakan antara lain:
-- Pendaftaran perkara perdata secara online
+### Fitur Utama
+
+- Bantuan penyusunan dokumen hukum (seperti surat gugatan perdata dan permohonan)
 - Informasi terkini dan transparan terkait status perkara
 - Layanan Posbakum online yang terintegrasi dengan sistem pengadilan
 
@@ -20,7 +21,7 @@ Fitur utama yang akan disediakan antara lain:
 ## 🚧 Status Pengembangan
 
 > Aplikasi ini masih dalam tahap **pengembangan aktif**.  
-Fitur-fitur lengkap dan teknologi yang digunakan akan diumumkan dan didokumentasikan seiring dengan kemajuan proyek.
+> Fitur-fitur lengkap dan teknologi yang digunakan akan diumumkan dan didokumentasikan seiring dengan kemajuan proyek.
 
 ---
 
@@ -32,8 +33,9 @@ Sekarbanyu dikembangkan dengan semangat transparansi, keterbukaan informasi, dan
 
 ## 📬 Kontak
 
-Untuk informasi lebih lanjut, silakan kunjungi situs resmi Pengadilan Negeri Kediri:  
-[https://pn-kediri.go.id](https://pn-kediri.go.id)
+Untuk informasi lebih lanjut, silakan kunjungi situs resmi Pengadilan Negeri Kediri:
+
+🌐 https://pn-kediri.go.id
 
 ---
 

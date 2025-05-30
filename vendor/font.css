@@ -1,14 +1,14 @@
 /* Import Merriweather font */
 @font-face {
     font-family: 'Merriweather';
-    src: url('../resource/font/Merriweather-VariableFont_opsz,wdth,wght.ttf') format('truetype');
+    src: url('../assets/font/Merriweather-VariableFont_opsz,wdth,wght.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Merriweather Italic';
-    src: url('../resource/font/Merriweather-Italic-VariableFont_opsz,wdth,wght.ttf') format('truetype');
+    src: url('../assets/font/Merriweather-Italic-VariableFont_opsz,wdth,wght.ttf') format('truetype');
     font-weight: normal;
     font-style: italic;
 }
@@ -16,14 +16,14 @@
 /* Import Nunito font */
 @font-face {
     font-family: 'Nunito';
-    src: url('../resource/font/Nunito-VariableFont_wght.ttf') format('truetype');
+    src: url('../assets/font/Nunito-VariableFont_wght.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Nunito Italic';
-    src: url('../resource/font/Nunito-Italic-VariableFont_wght.ttf') format('truetype');
+    src: url('../assets/font/Nunito-Italic-VariableFont_wght.ttf') format('truetype');
     font-weight: normal;
     font-style: italic;
 }
