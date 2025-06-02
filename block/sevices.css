@@ -1,0 +1,104 @@
+/* layanan.css */
+.services {
+    padding: 4rem 1rem;
+    color: #444;
+    font-family: 'Nunito', sans-serif;
+    padding: 5% 10%;
+}
+
+.services_title {
+    text-align: center;
+    font-family: 'Merriweather', serif;
+    font-size: 3rem;
+    margin-bottom: 3rem;
+    color: #7A3162;
+}
+
+.services_list {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.service_item {
+    min-width: 100%;
+    margin-top: 60px;
+    /* display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center; */
+    transition: transform 0.3s ease;
+}
+
+.service_item:hover {
+    /* transform: translateY(-5px) scale(1.005);     */
+}
+
+.service_image {
+    width: 100px;
+    height: auto;
+    margin-bottom: 1rem;
+}
+
+.service_content h3 {
+    font-family: 'Merriweather', serif;
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    color: #7A3162;
+}
+
+.service_content p {
+    font-size: 1.5rem;
+    line-height: 1.6;
+}
+
+.service_content a {
+    color: #7A3162;
+    text-decoration: underline;
+}
+
+.service_button {
+    width: 200px;
+    height: 50px;
+    background-color: #7A3162;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 400;
+    cursor: pointer;
+    margin-right: 10px;
+    margin-top: 20px;
+    transition: all 0.1s ease-in-out;
+}
+
+.service_button:hover {
+    background-color: #542243;
+    transform: scale(1.05);
+}
+
+.service_button:active {
+    background-color: #38162b;
+    transform: scale(0.95);
+}
+
+@media (min-width: 768px) {
+    .service_item {
+        flex-direction: row;
+        text-align: left;
+        gap: 2rem;
+    }
+
+    .service_image {
+        width: 120px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .services_title {
+        font-size: 2.5rem;
+    }
+}
