@@ -1,78 +1,96 @@
-/* layanan.css */
 .services {
-    padding: 4rem 1rem;
+    width: 100%;
+    padding: 0 10%;
     color: #444;
     font-family: 'Nunito', sans-serif;
-    padding: 5% 10%;
 }
 
 .services_title {
     text-align: center;
-    font-family: 'Merriweather', serif;
     font-size: 3rem;
-    margin-bottom: 3rem;
+    margin-bottom: 5rem;
     color: #7A3162;
+    font-family: 'Merriweather', serif;
 }
 
-.services_list {
+.service_card {
     display: flex;
     flex-direction: column;
-    gap: 3rem;
-    max-width: 900px;
-    margin: 0 auto;
-}
-
-.service_item {
-    min-width: 100%;
-    margin-top: 60px;
-    /* display: flex;
-    flex-direction: column;
+    margin-bottom: 8rem;
     align-items: center;
-    text-align: center; */
-    transition: transform 0.3s ease;
+    gap: 2rem;
 }
 
-.service_item:hover {
-    /* transform: translateY(-5px) scale(1.005);     */
+.service_card.reverse {
+    flex-direction: column-reverse;
 }
 
-.service_image {
-    width: 100px;
+/* Gambar ilustrasi */
+.service_card-img {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.5s ease;
+}
+
+.service_card-img:hover {
+    transform: scale(1.05);
+}
+
+.service_card-img img {
+    max-width: 100%;
     height: auto;
-    margin-bottom: 1rem;
+    max-height: 350px;
+    filter: opacity(0.80) drop-shadow(0 4px 6px rgba(0, 0, 0, 0.1));
 }
 
-.service_content h3 {
+/* Konten teks */
+.service_card-content {
+    flex: 1;
+    max-width: 700px;
+    text-align: center;
+    transition: all 0.5s ease;
+}
+
+.service_card-content:hover {
+    transform: scale(1.02);
+}
+
+.service_card-content h3 {
     font-family: 'Merriweather', serif;
-    font-size: 2rem;
-    margin-bottom: 0.5rem;
+    font-size: 3rem;
+    margin-bottom: 1rem;
     color: #7A3162;
 }
 
-.service_content p {
+.service_card-content p {
     font-size: 1.5rem;
-    line-height: 1.6;
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
 }
 
-.service_content a {
+.service_card-content a {
     color: #7A3162;
     text-decoration: underline;
 }
 
+.service_card-buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
 .service_button {
-    width: 200px;
-    height: 50px;
     background-color: #7A3162;
-    color: white;
+    color: #fff !important;
+    padding: 0.75rem 1.5rem;
     border: none;
     border-radius: 10px;
-    padding: 0.75rem 1.5rem;
     font-size: 1rem;
-    font-weight: 400;
-    cursor: pointer;
-    margin-right: 10px;
-    margin-top: 20px;
-    transition: all 0.1s ease-in-out;
+    text-decoration: none !important;
+    transition: all 0.2s ease;
 }
 
 .service_button:hover {
@@ -80,25 +98,54 @@
     transform: scale(1.05);
 }
 
-.service_button:active {
-    background-color: #38162b;
-    transform: scale(0.95);
-}
-
 @media (min-width: 768px) {
-    .service_item {
+    .service_card {
         flex-direction: row;
+        align-items: flex-start;
         text-align: left;
-        gap: 2rem;
     }
 
-    .service_image {
-        width: 120px;
+    .service_card.reverse {
+        flex-direction: row-reverse;
+    }
+
+    .service_card-content {
+        padding: 0 2rem;
+        text-align: left;
+    }
+
+    .service_card.reverse .service_card-content {
+        text-align: right;
+    }
+
+    .service_card-buttons {
+        justify-content: flex-start;
+    }
+
+    .service_card.reverse .service_card-buttons {
+        justify-content: flex-end;
     }
 }
 
-@media (min-width: 1024px) {
-    .services_title {
-        font-size: 2.5rem;
+@media (max-width: 768px) {
+
+    .service_card,
+    .service_card.reverse {
+        flex-direction: column !important;
+    }
+
+    .service_card-img {
+        order: 0;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 1rem;
+    }
+
+    .service_card-content {
+        order: 1;
+        width: 100%;
+        text-align: center !important;
+        padding: 0 0.5rem;
     }
 }
