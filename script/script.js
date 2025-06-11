@@ -140,10 +140,3 @@ document.addEventListener('DOMContentLoaded', function () {
         toggleNavigationMenu();
     });
 });
-
-document.querySelectorAll('.service_button').forEach(btn => {
-    btn.addEventListener('click', function () {
-        const href = btn.getAttribute('href');
-        if (href) window.open(href, '_blank');
-    });
-});
