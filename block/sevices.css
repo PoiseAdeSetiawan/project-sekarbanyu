@@ -8,21 +8,23 @@
 .services_title {
     text-align: center;
     font-size: 3rem;
-    margin-bottom: 5rem;
+    margin: 6rem 0 5rem;
     color: #7A3162;
     font-family: 'Merriweather', serif;
 }
 
 .service_card {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    align-items: center;
+    text-align: left;
     margin-bottom: 8rem;
     align-items: center;
     gap: 2rem;
 }
 
 .service_card.reverse {
-    flex-direction: column-reverse;
+    flex-direction: row-reverse;
 }
 
 .service_card-img {
@@ -44,12 +46,15 @@
     filter: opacity(0.80) drop-shadow(0 4px 6px rgba(0, 0, 0, 0.1));
 }
 
-/* Konten teks */
 .service_card-content {
     flex: 1;
     max-width: 700px;
-    text-align: center;
+    text-align: left;
     transition: all 0.5s ease;
+}
+
+.reverse .service_card-content {
+    text-align: right;
 }
 
 .service_card-content:hover {
@@ -76,9 +81,13 @@
 
 .service_card-buttons {
     display: flex;
-    justify-content: center;
+    justify-content: left;
     flex-wrap: wrap;
     gap: 1rem;
+}
+
+.reverse .service_card-buttons {
+    justify-content: right;
 }
 
 .service_button {
@@ -97,36 +106,7 @@
     transform: scale(1.05);
 }
 
-@media (min-width: 768px) {
-    .service_card {
-        flex-direction: row;
-        align-items: flex-start;
-        text-align: left;
-    }
-
-    .service_card.reverse {
-        flex-direction: row-reverse;
-    }
-
-    .service_card-content {
-        padding: 0 2rem;
-        text-align: left;
-    }
-
-    .service_card.reverse .service_card-content {
-        text-align: right;
-    }
-
-    .service_card-buttons {
-        justify-content: flex-start;
-    }
-
-    .service_card.reverse .service_card-buttons {
-        justify-content: flex-end;
-    }
-}
-
-@media (max-width: 768px) {
+@media (max-width: 800px) {
 
     .service_card,
     .service_card.reverse {
@@ -139,6 +119,7 @@
         justify-content: center;
         align-items: center;
         margin-bottom: 1rem;
+        padding: 0 100px;
     }
 
     .service_card-content {
@@ -146,5 +127,33 @@
         width: 100%;
         text-align: center !important;
         padding: 0 0.5rem;
+    }
+
+    .service_card-buttons {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 550px) {
+    .services_title {
+        font-size: 2.5rem;
+        margin: 4rem 0 3rem;
+    }
+
+    .service_card-img {
+        padding: 0 50px;
+    }
+
+    .service_card-content h3 {
+        font-size: 2rem;
+    }
+
+    .service_card-content p {
+        font-size: 1rem;
+    }
+
+    .service_button {
+        padding: 0.5rem 1rem;
+        font-size: 0.9rem;
     }
 }
