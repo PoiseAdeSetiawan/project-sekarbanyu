@@ -111,6 +111,7 @@
     .service_card,
     .service_card.reverse {
         flex-direction: column !important;
+        gap: 1rem;
     }
 
     .service_card-img {
@@ -132,6 +133,10 @@
     .service_card-buttons {
         justify-content: center;
     }
+
+    .reverse .service_card-buttons {
+        justify-content: center;
+    }
 }
 
 @media (max-width: 550px) {
@@ -141,7 +146,7 @@
     }
 
     .service_card-img {
-        padding: 0 50px;
+        padding: 0 70px;
     }
 
     .service_card-content h3 {
