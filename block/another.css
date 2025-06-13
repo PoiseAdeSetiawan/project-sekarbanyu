@@ -4,20 +4,18 @@
 }
 
 .another_wrapper {
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 2rem;
-    max-width: 1400px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
     margin: 0 auto;
+    width: 100%;
 }
 
 .another_title {
     font-family: 'Merriweather', serif;
     font-weight: 700;
     color: #7A3162;
-    font-size: 2rem;
+    font-size: 2.2rem;
     margin-bottom: 1rem;
 }
 
@@ -25,11 +23,8 @@
     background: #fff;
     border-radius: 16px;
     box-shadow: 0 2px 12px rgba(122, 49, 98, 0.10);
-    flex: 1 1 260px;
-    min-width: 220px;
-    max-width: 450px;
-    height: 110px;
-    margin: 0.5rem 0;
+    width: 100%;
+    height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -50,7 +45,7 @@
 .another_item-image {
     width: 50px;
     height: 50px;
-    margin-right: 10px;
+    margin: 0 15px 0 10px;
     object-fit: contain;
 }
 
@@ -60,7 +55,7 @@
     margin: 0;
     padding: 0 10px;
     width: 100%;
-    font-size: 1.1rem;
+    font-size: 1.3rem;
     color: #7A3162;
 }
 
@@ -69,39 +64,41 @@
     margin: 0;
     padding: 0 10px;
     width: 100%;
-    font-size: 0.8rem;
+    font-size: 1rem;
     color: #444;
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1400px) {
     .another_item {
         min-width: 280px;
         max-width: 420px;
         height: 130px;
-        font-size: 1.15rem;
+        /* font-size: 1.15rem; */
     }
 }
 
-@media (max-width: 900px) {
-    .another_item {
-        width: 45%;
-        min-width: 140px;
-        max-width: 100%;
-        font-size: 1rem;
+@media (max-width: 1200px) {
+    .another_wrapper {
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
 @media (max-width: 600px) {
     .another_wrapper {
-        flex-direction: column;
-        align-items: center;
-        gap: 0.5rem;
+        grid-template-columns: 1fr;
+        gap: 10px;
     }
 
-    .another_item {
-        width: 90%;
-        min-width: 100px;
-        height: 90px;
-        font-size: 0.98rem;
+    .another_item-image {
+        width: 40px;
+        height: 40px;
+    }
+
+    .another_item-title {
+        font-size: 1rem;
+    }
+
+    .another_item-subtitle {
+        font-size: 0.8rem;
     }
 }
