@@ -15,6 +15,7 @@ Aplikasi ini bertujuan untuk meningkatkan pelayanan publik di lingkungan Pengadi
 - Bantuan penyusunan dokumen hukum (seperti surat gugatan perdata dan permohonan)
 - Informasi terkini dan transparan terkait status perkara
 - Layanan Posbakum online yang terintegrasi dengan sistem pengadilan
+- Permohonan untuk berperkara secara gratis (Prodeo)
 
 ---
 
