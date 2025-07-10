@@ -3,6 +3,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const nameInput = document.getElementById('name');
     const headerTitle = document.querySelector('.header_title');
     const headerSubtitle = document.querySelector('.header_subtitle');
+    const headerDescription = document.querySelector('.header_description'); // tambahkan ini
     const registrationSection = document.querySelector('.registration');
 
     // Disable background scrolling when popup is shown
@@ -47,17 +48,25 @@ document.addEventListener('DOMContentLoaded', function () {
             const html = `Hai ${name},<br>Selamat Datang di`;
             headerTitle.innerHTML = html;
             headerSubtitle.innerHTML = ""; // Hide Sekarbanyu before animation
+            headerDescription.innerHTML = ""; // Hide description before animation
 
             // Calculate delay: total time = chars * speed
             const speed = 30;
             const titleLength = headerTitle.innerHTML.replace(/<[^>]*>/g, '').length;
-            const delay = titleLength * speed;
+            const subtitleLength = "Sekarbanyu".length;
+            const descriptionText = "Sistem Integrasi Perkara Perdata dan Pelayanan Bantuan Hukum";
+            const descriptionLength = descriptionText.length;
 
             typeWriter(headerTitle, speed);
             setTimeout(() => {
                 headerSubtitle.innerHTML = "Sekarbanyu";
                 typeWriter(headerSubtitle, speed);
-            }, delay);
+            }, titleLength * speed);
+
+            setTimeout(() => {
+                headerDescription.innerHTML = descriptionText;
+                typeWriter(headerDescription, speed);
+            }, (titleLength + subtitleLength) * speed);
 
             form.reset();
             // Hide popup and enable scrolling

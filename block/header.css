@@ -17,12 +17,27 @@
     gap: 24px;
 }
 
-.header_logo {
-    width: 100px;
-    height: auto;
+.header_logo_wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
     z-index: 999;
+}
+
+.header_logo {
+    max-height: 100px;
     transition: all 0.2s ease-in-out;
-    align-self: flex-end;
+}
+
+.header_logo-pnk {
+    margin-right: 20px;
+    padding: 10px 0;
+}
+
+.header_logo-bnb {
+    padding: 10px 0;
 }
 
 .header_logo:hover {
@@ -55,9 +70,19 @@
     font-family: 'Merriweather', 'Nunito', sans-serif;
     font-weight: 700;
     text-align: left;
-    font-size: 7rem;
+    font-size: 8rem;
     line-height: 1.15;
     color: #7A3162;
+    margin: 0 0 20px;
+}
+
+.header_description {
+    font-family: 'Merriweather', 'Nunito', sans-serif;
+    font-weight: 600;
+    text-align: left;
+    color: #555;
+    font-size: 2rem;
+    line-height: 1.1;
     margin: 0;
 }
 
