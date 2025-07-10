@@ -54,7 +54,7 @@ document.addEventListener('DOMContentLoaded', function () {
             const speed = 30;
             const titleLength = headerTitle.innerHTML.replace(/<[^>]*>/g, '').length;
             const subtitleLength = "Sekarbanyu".length;
-            const descriptionText = "Sistem Integrasi Perkara Perdata dan Pelayanan Bantuan Hukum";
+            const descriptionText = "Aplikasi Layanan Bantuan Hukum Pengadilan Negeri Kediri";
             const descriptionLength = descriptionText.length;
 
             typeWriter(headerTitle, speed);
